@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Click Coletivo — projeto de fotografia do IFAL-MD que registra olhares sobre o cotidiano dos alunos.">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Click Coletivo</title>
+    <link rel="icon" type="image/png" href="imagens/logo.png">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo Click Coletivo">
+        </div>
+        <h1>BEM-VINDO AO CLICK COLETIVO</h1>
+        <h2>Conheça nosso projeto!!</h2>
+    </header>
+
+    <!-- ===== NAV ===== -->
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#responsaveis">Responsáveis</a></li>
+            <li><a href="#contatos">Contato</a></li>
+            <li><a href="#redes">Redes</a></li>
+            <li><a href="#galeria-section">Galeria</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="container">
+
+        <!-- Card Sobre -->
+        <section id="sobre" class="card">
+            <h2>Sobre</h2>
+            <p>O Click Coletivo é um projeto do IFAL-MD que leva a fotografia como forma de expressão e experimentação, voltada aos alunos.</p>
+            <p>É um projeto sem fins lucrativos, feito para registrar momentos e diferentes olhares sobre o cotidiano.</p>
+        </section>
+
+        <!-- Área de Responsáveis -->
+        <section id="responsaveis" class="secao-responsaveis">
+            <h2 class="titulo-secao">Responsáveis</h2>
+
+            <div class="container-cards-pequenos">
+
+                <!-- Card Responsável 1 -->
+                <div class="card card-pessoa">
+                    <h3>Marcos Roney</h3>
+                    <p>Professor responsável</p>
+                </div>
+
+                <!-- Card Responsável 2 -->
+                <div class="card card-pessoa">
+                    <h3>Luiz Fabiano</h3>
+                    <p>Aluno 2º ano A de DS</p>
+                </div>
+
+                <!-- Card Responsável 3 -->
+                <div class="card card-pessoa">
+                    <h3>Maria Luiza</h3>
+                    <p>Aluna 3º ano B de MA</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Card Contato -->
+        <section id="contatos" class="card">
+            <h2>Contato</h2>
+            <p>Envie um e-mail para:</p>
+            <a href="mailto:clickcoletivo182@gmail.com">clickcoletivo182@gmail.com</a>
+        </section>
+
+        <!-- Card Redes -->
+        <section id="redes" class="card">
+            <h2>Redes sociais</h2>
+            <p>Acompanhe nosso Instagram e TikTok:</p>
+            <p>INSTAGRAM</p>
+            <a href="https://instagram.com/click.coletivo" target="_blank" rel="noopener noreferrer">@click.coletivo</a>
+            <p>TIKTOK</p>
+            <a href="https://www.tiktok.com/@click_coletivo?lang=pt-BR" target="_blank" rel="noopener noreferrer">@click_coletivo</a>
+        </section>
+
+        <!-- ===== GALERIA ===== -->
+        <section id="galeria-section">
+            <h2 class="titulo-secao">Galeria</h2>
+            <!-- As fotos são inseridas aqui pelo JS -->
+            <div class="galeria" id="galeria"></div>
+        </section>
+
+        <!-- ===== LIGHTBOX ===== -->
+        <!-- Janela modal que amplia a foto clicada na galeria.-->
+        <div class="lightbox" id="lightbox"
+             role="dialog"
+             aria-modal="true"
+             aria-label="Foto ampliada"
+             aria-hidden="true">
+
+            <!-- Botão X para fechar o lightbox -->
+            <button class="fechar" id="fechar" aria-label="Fechar">&times;</button>
+            <!-- Seta esquerda: volta para a foto anterior -->
+            <button class="seta anterior" id="anterior" aria-label="Foto anterior">&#10094;</button>
+            <!-- Imagem que o JS troca a cada clique nas setas -->
+            <img id="imagem-ampliada" src="" alt="Foto ampliada">
+            <!-- Seta direita: avança para a próxima foto -->
+            <button class="seta proxima" id="proxima" aria-label="Próxima foto">&#10095;</button>
+            <!-- Contador "atual / total" (ex.: 3 / 6) -->
+            <span class="contador" id="contador">1 / 6</span>
+        </div>
+        <!-- ===== FIM DO LIGHTBOX ===== -->
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>CLICK COLETIVO 2026 &copy;</p>
+    </footer>
+
+</body>
+</html>
