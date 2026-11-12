@@ -351,3 +351,238 @@ footer p {
     letter-spacing: 1px;
     opacity: 0.8;
 }
+/* ===== RESPONSIVIDADE ===== */
+
+/* ---------- TABLETS (até 900px) ---------- */
+@media (max-width: 900px) {
+    header {
+        padding: 50px 20px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    header h2 {
+        font-size: 1.15rem;
+    }
+
+    nav ul {
+        gap: 22px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    main.container {
+        margin: 40px auto;
+        gap: 28px;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+    .card h2,
+    .titulo-secao {
+        font-size: 1.5rem;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+
+    .seta {
+        width: 44px;
+        height: 44px;
+        font-size: 1.7rem;
+    }
+}
+
+/* ---------- CELULARES GRANDES (até 600px) ---------- */
+@media (max-width: 600px) {
+    header {
+        padding: 40px 16px;
+    }
+
+    .logo {
+        width: 140px;
+        margin-bottom: 22px;
+    }
+
+    header h1 {
+        font-size: 1.9rem;
+        letter-spacing: 0.5px;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    /* NAV: vira "pílulas" quebrando linha */
+    nav {
+        padding: 14px 12px;
+    }
+
+    nav ul {
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 20px;
+    }
+
+    /* remove a linha animada antiga no mobile (fica estranha em pílula) */
+    nav a::after {
+        display: none;
+    }
+
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    main.container {
+        margin: 28px auto;
+        padding: 0 14px;
+        gap: 22px;
+    }
+
+    .card {
+        padding: 22px 18px;
+        border-radius: 10px;
+    }
+
+    .card h2,
+    .titulo-secao {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    /* Responsáveis empilham bonitinho */
+    .container-cards-pequenos {
+        gap: 14px;
+    }
+
+    .card-pessoa {
+        flex: 1 1 calc(50% - 14px);
+        min-width: 130px;
+        padding: 18px 12px;
+    }
+
+    .card-pessoa h3 {
+        font-size: 1.05rem;
+    }
+
+    /* Galeria com 2 colunas fixas no celular */
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* Lightbox: setas menores e mais próximas das bordas */
+    .lightbox img {
+        max-width: 92%;
+        max-height: 80vh;
+    }
+
+    .seta {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+
+    .seta.anterior { left: 8px; }
+    .seta.proxima  { right: 8px; }
+
+    .fechar {
+        top: 12px;
+        right: 14px;
+        font-size: 2rem;
+    }
+
+    .contador {
+        bottom: 14px;
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 20px 14px;
+        margin-top: 40px;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* ---------- CELULARES PEQUENOS (até 380px) ---------- */
+@media (max-width: 380px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header h2 {
+        font-size: 0.9rem;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        padding: 5px 8px;
+    }
+
+    .card {
+        padding: 18px 14px;
+    }
+
+    .card h2,
+    .titulo-secao {
+        font-size: 1.15rem;
+    }
+
+    /* Responsáveis em coluna única */
+    .card-pessoa {
+        flex: 1 1 100%;
+    }
+
+    /* Galeria 2 colunas mesmo assim (fica ok) */
+    .galeria {
+        gap: 8px;
+    }
+
+    .seta {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+}
+
+/* ---------- ACESSIBILIDADE: reduz animações ---------- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .logo:hover,
+    .card:hover,
+    .card-pessoa:hover,
+    .galeria .foto:hover,
+    .galeria .foto:hover img {
+        transform: none;
+    }
+}
